@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/index.css') }}>
+    <title>Document</title>
+</head>
+<body>
+    {% for post in posts %}
+        <div class="post">
+            <div class="post__header">
+                <span class="post__text">{{ post.text }}</span>
+            </div>
+            <img class="post__image" src={{ post.image_link }} />
+            <div class="post__watermark">
+                <span class="post__text">{{ post.watermark }}</span>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>
+

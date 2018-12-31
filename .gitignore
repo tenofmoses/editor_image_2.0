@@ -1,0 +1,7 @@
+$ cat .gitignore
+__pycache__
+done/
+fonts/
+.vscode/
+vk_token.py
+.DS_Store
